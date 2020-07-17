@@ -1,0 +1,5 @@
+abnormal
+freerun
+normal
+other
+stop
