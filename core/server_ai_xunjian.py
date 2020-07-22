@@ -1,8 +1,5 @@
 #coding:utf-8
 from flask import Flask, request
-'''
-pipeline of smart_sync
-'''
 import json
 import os
 import time
@@ -22,8 +19,8 @@ def my_json():
         file_path = os.path.join('../upload/', old_file_name)
         upload_file.save(file_path)
         objectid = 'upload/' + old_file_name
-        oss_upload_img.oss_upload_img(file_path, objectid, save_flag = True)
-        object_id, ai_label = infer_label.infer_label(file_path)
+        oss_upload_img.oss_upload_img(file_path, objectid, save_flag = False)
+        object_id, ai_label, score = infer_label.infer_label(file_path)
         print('---------------------------------------------')
         print(object_id, ai_label, score)
         print('---------------------------------------------')
