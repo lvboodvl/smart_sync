@@ -26,10 +26,10 @@ caffe_model_googlenet = root_googlenet + 'googlenet.caffemodel'
 googlenet = caffe.Net(deploy_googlenet, caffe_model_googlenet, caffe.TEST)
 # labels = np.loadtxt(labels_filename, str, delimiter='\t')
 root_alexnet = root_googlenet
-deploy_alexnet = root_alexnet + 'deploy-alex.prototxt'
+#deploy_alexnet = root_alexnet + 'deploy-alex.prototxt'
 labels_filename = root_alexnet + 'labels.txt'
-caffe_model_alexnet = root_alexnet + 'snapshot_iter_992.caffemodel'
-alexnet = caffe.Net(deploy_alexnet, caffe_model_alexnet, caffe.TEST)
+#caffe_model_alexnet = root_alexnet + 'snapshot_iter_992.caffemodel'
+#alexnet = caffe.Net(deploy_alexnet, caffe_model_alexnet, caffe.TEST)
 
 '''
 define infer function with alexnet, googlenet and senet
