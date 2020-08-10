@@ -19,7 +19,7 @@ def my_json():
         file_path = os.path.join('../upload/', old_file_name)
         upload_file.save(file_path)
         objectid = 'upload/' + old_file_name
-        oss_upload_img.oss_upload_img(file_path, objectid, save_flag = False)
+        oss_upload_img.oss_upload_img(file_path, objectid, save_flag = True)
         object_id, ai_label, score = infer_label.infer_label(file_path)
         print('---------------------------------------------')
         print(object_id, ai_label, score)
@@ -30,7 +30,7 @@ def my_json():
             print('//////////////////////////////////')
             print('abnormal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             print('//////////////////////////////////')            
-            time.sleep(60)
+            time.sleep(30)
         
         return 'save successful'   
  
